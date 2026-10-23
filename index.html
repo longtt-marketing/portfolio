@@ -196,6 +196,9 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
 .topnav div a{color:#c9d4ee;text-decoration:none;font-size:14px;font-weight:500;padding:0 12px;min-height:44px;display:inline-flex;align-items:center;border-radius:8px;white-space:nowrap}
 .topnav div a:hover,.topnav div a.on{color:#fff;background:rgba(255,255,255,.08)}
 .topnav div a.cv{color:#fff;background:var(--blue)}
+.topnav div a.pdf{color:#fff;box-shadow:inset 0 0 0 1px #4a5a80;margin-left:4px}
+.topnav div a.pdf:hover{box-shadow:inset 0 0 0 1px var(--blue-d)}
+.topnav div a.cv{margin-left:4px}
 .topnav div a.cv:hover{background:#2d55e0}
 .web .s>.inner{max-width:1264px;margin:0 auto}
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .45s cubic-bezier(.2,.7,.2,1),transform .45s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0) * 45ms)}
@@ -238,6 +241,7 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
   .web{scroll-snap-type:none}
   .web .s{padding:76px 16px 36px;min-height:auto}
   .topnav{padding:0 8px}.topnav .brand{display:none}.topnav div{width:100%}
+  .topnav div a.cv{order:-3;margin-left:0}.topnav div a.pdf{order:-2}
   h1{font-size:54px}h2{font-size:30px}.lead{font-size:18px}
   .g2,.g3,.g4,.g57,.g75,.links{grid-template-columns:minmax(0,1fr)}
   .g4.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
@@ -267,7 +271,7 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
 </head>
 <body class="web">
 <a class="skip" href="#fit">Skip to content</a>
-<nav class="topnav" aria-label="Sections"><a class="brand" href="#cover">Tran The Long</a><div><a href="#fit">Role fit</a><a href="#audit">Your ads</a><a href="#case1">Results</a><a href="#plan">Focus</a><a href="#links">Links</a><a href="Tran_The_Long_Cover_Letter.pdf">Letter</a><a href="Tran_The_Long_Portfolio.pdf">Portfolio (PDF)</a><a class="cv" href="Tran_The_Long_CV.pdf">CV (PDF)</a></div></nav>
+<nav class="topnav" aria-label="Sections"><a class="brand" href="#cover">Tran The Long</a><div><a href="#fit">Role fit</a><a href="#audit">Your ads</a><a href="#case1">Results</a><a href="#plan">Focus</a><a href="#links">Links</a><a class="pdf" href="Tran_The_Long_Cover_Letter.pdf">Cover letter</a><a class="pdf" href="Tran_The_Long_Portfolio.pdf">Full portfolio (PDF)</a><a class="cv" href="Tran_The_Long_CV.pdf">CV (PDF)</a></div></nav>
 <div class="progress" aria-hidden="true"></div>
 <main>
 <section class="s dark tech" id="cover" data-title="Cover">
