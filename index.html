@@ -95,25 +95,68 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
 .links a.card small{font-size:13px;color:var(--muted-d);line-height:1.45}
 .links a.card strong{font-family:var(--display);font-size:18px;color:#fff;display:flex;justify-content:space-between;gap:10px}
 .card .tag{align-self:flex-start}
-.s:not(#cover) .inner>.eyebrow{margin-top:auto}
+.s:not(#cover) .inner{justify-content:center;gap:30px}
 .stat b.sm{font-size:34px}
 .funnel div span{white-space:nowrap}
 .glow{position:absolute;right:-220px;bottom:-340px;width:780px;height:780px;border-radius:50%;background:radial-gradient(circle,rgba(61,107,255,.30),rgba(61,107,255,0) 65%);pointer-events:none}
 
-/* Direction B (light editorial), boards only for comparison: same markup, .b on the slide. */
-.s.b,.s.b.dark{background:#ffffff;color:#141414}
-.s.b .eyebrow{color:#141414}.s.b .eyebrow i{color:#6b6b6b}
-.s.b h1,.s.b h2{font-weight:700;letter-spacing:-.035em}
-.s.b .lead{color:#4a4a4a}
-.s.b .stat{background:transparent;border:0;border-top:3px solid #141414;border-radius:0;padding:16px 0 0}
-.s.b .stat b{color:#141414}.s.b .stat span{color:#4a4a4a}
-.s.b .stat:first-child b{color:#c46a00}
-.s.b .btn.primary{background:#141414;color:#fff}.s.b .btn.ghost{border-color:#141414;color:#141414}
-.s.b .tag{background:#f3efe6;color:#3b3020}
-.s.b .card,.s.b .card.k{background:#faf8f3;border-color:#e7e1d4}
-.s.b .bar .fill.hi{background:#c46a00}.s.b .bar .track{background:#efebe2}
-.s.b .glow{display:none}
-.s.b .foot,.s.b .small{color:#5b5b5b}.s.b .foot{border-color:#e2ddd2}
+/* Lean components (23/10 evening). */
+.stat.big b{font-size:64px}
+.stat b small{font-size:.45em;opacity:.7;font-weight:500}
+.say{font-size:19px;line-height:1.55;max-width:980px;color:var(--muted)}
+.dark .say{color:var(--muted-d)}
+.muted{color:var(--muted)}.dark .muted{color:var(--muted-d)}
+.tag.big{font-size:15px;padding:9px 16px}
+.tiles{gap:16px}
+.tile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 22px 68px;display:flex;flex-direction:column;gap:6px;min-height:112px;justify-content:center}
+.tile h3{font-size:20px}.tile p{font-size:15.5px;color:var(--muted)}
+.ck{position:absolute;left:22px;top:50%;width:30px;height:30px;margin-top:-15px;border-radius:50%;display:inline-block}
+.ck.ok{background:#e3f6ec;box-shadow:inset 0 0 0 2px #1f8f5f}
+.ck.part{background:#fff1d1;box-shadow:inset 0 0 0 2px #c27c00}
+.ck::after{content:"";position:absolute;left:11px;top:6px;width:7px;height:13px;border:solid #1f8f5f;border-width:0 3px 3px 0;transform:rotate(45deg)}
+.ck.part::after{left:7px;top:13px;width:16px;height:0;border-width:0 0 3px 0;border-color:#c27c00;transform:none}
+.ck.mini{position:relative;left:auto;top:auto;margin:0 4px 0 0;width:18px;height:18px;vertical-align:-4px}
+.ck.mini::after{left:6px;top:3px;width:4px;height:8px;border-width:0 2px 2px 0}
+.ck.part.mini::after{left:4px;top:8px;width:10px;height:0;border-width:0 0 2px 0}
+.steps{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;position:relative}
+.steps::before{content:"";position:absolute;left:4%;right:4%;top:50%;height:2px;background:linear-gradient(90deg,var(--blue),#ff8a50);z-index:0}
+.st{position:relative;z-index:1;background:var(--ink2);border:1px solid var(--line-d);border-radius:16px;padding:20px 18px;display:flex;flex-direction:column;gap:6px;min-height:118px}
+.st b{font-family:var(--display);font-size:18px;color:#fff}.st span{font-size:14.5px;color:var(--muted-d)}
+.st.ok{border-color:#1f5f45;background:#0f241b}.st.ok b::before{content:"\2713  ";color:#6ee7b0}
+.st.no{border-color:#8a3a12;background:#2a1710}.st.no b::before{content:"\2715  ";color:#ffb48a}
+.center{align-items:center;text-align:center;justify-content:center}
+.ring{position:relative;width:150px;height:150px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke:#e6eaf2;stroke-width:12}
+.ring .arc{stroke:var(--blue);stroke-linecap:round;stroke-dasharray:326.7;stroke-dashoffset:calc(326.7 * (1 - var(--p) / 100))}
+.ring.am .arc{stroke:var(--amber)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:36px;font-weight:600}
+.weeks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;position:relative}
+.weeks::before{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:#26314d}
+.weeks::after{content:"";position:absolute;left:0;top:11px;height:2px;width:100%;background:linear-gradient(90deg,var(--blue),var(--amber));transform-origin:left}
+.weeks li{position:relative;z-index:1;padding-top:34px;display:flex;flex-direction:column;gap:4px}
+.weeks li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px rgba(61,107,255,.25)}
+.weeks b{font-family:var(--display);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-d)}
+.weeks h3{font-size:24px;color:#fff}.weeks p{font-size:15.5px;color:var(--muted-d)}
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;position:relative}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:var(--line)}
+.timeline li{position:relative;padding-top:34px;display:flex;flex-direction:column;gap:5px}
+.timeline li::before{content:"";position:absolute;left:0;top:4px;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 3px var(--blue)}
+.timeline li.now::before{background:var(--blue);box-shadow:0 0 0 5px rgba(61,107,255,.2)}
+.timeline b{font-family:var(--display);font-size:14px;color:var(--blue);letter-spacing:.06em}
+.timeline h3{font-size:17px}.timeline p{font-size:14.5px;color:var(--muted)}
+.bar.s2{grid-template-columns:130px minmax(0,1fr) 80px}
+
+/* Direction B (cinematic, all dark, amber accent): boards only, for comparison. */
+.s.b{background:#07090f;color:#f2f4f8}
+.s.b h1,.s.b h2,.s.b h3{color:#fff}
+.s.b .eyebrow{color:#ffb020}.s.b .eyebrow i{color:#8b93a7}
+.s.b .stat,.s.b .tile,.s.b .card{background:#10141f;border-color:#232a3b}
+.s.b .stat b{color:#ffb020}.s.b .stat span,.s.b .tile p,.s.b .say,.s.b .muted{color:#a7afc2}
+.s.b .btn.primary{background:#ffb020;color:#141414}
+.s.b .bar .track{background:#1b2130}.s.b .bar .fill.hi{background:#ffb020}
+.s.b .ring circle{stroke:#1b2130}.s.b .ring .arc{stroke:#ffb020}
+.s.b .glow{background:radial-gradient(circle,rgba(255,176,32,.18),rgba(255,176,32,0) 65%)}
 
 /* Live page only (body.web): full-screen slides, motion, navigation. Boards on the canvas never get .web. */
 .web{scroll-snap-type:y proximity}
@@ -131,6 +174,16 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
 .js .in .rv{opacity:1;transform:none}
 .js .bar .fill,.js .funnel div{transform-origin:left;transform:scaleX(0);transition:transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--d,0) * 80ms + 150ms)}
 .js .in .bar .fill,.js .in .funnel div{transform:scaleX(1)}
+.js .ring .arc{stroke-dashoffset:326.7;transition:stroke-dashoffset 1.2s cubic-bezier(.2,.7,.2,1) .35s}
+.js .in .ring .arc{stroke-dashoffset:calc(326.7 * (1 - var(--p) / 100))}
+.js .weeks::after,.js .steps::before{transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.2,.7,.2,1) .2s}
+.js .in .weeks::after,.js .in .steps::before{transform:scaleX(1)}
+.js .in .st.no{animation:pulse 1.8s ease-in-out 1.2s 2}
+@keyframes pulse{50%{box-shadow:0 0 0 6px rgba(255,140,80,.22)}}
+.js .ck::after{opacity:0;transition:opacity .3s .5s}
+.js .in .ck::after{opacity:1}
+.links a.card strong span{transition:transform .2s}
+.links a.card:hover strong span{transform:translate(2px,-2px)}
 .nav{position:fixed;right:20px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:4px;z-index:5}
 .nav a{display:grid;place-items:center;width:24px;height:24px}
 .nav a::before{content:"";width:10px;height:10px;border-radius:50%;border:2px solid #8a97b5;transition:background .2s,border-color .2s}
@@ -138,7 +191,7 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
 .nav a:focus-visible{outline:2px solid var(--amber);outline-offset:2px;border-radius:50%}
 .progress{position:fixed;left:0;top:52px;height:3px;width:100%;transform-origin:left;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--blue),var(--amber));z-index:6}
 .skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:9;background:#fff;color:#000;padding:8px 12px;border-radius:8px}
-@media (prefers-reduced-motion:reduce){.js .rv,.js .bar .fill,.js .funnel div{transition:none;opacity:1;transform:none}.web{scroll-snap-type:none}}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .bar .fill,.js .funnel div,.js .weeks::after,.js .steps::before{transition:none;opacity:1;transform:none}.js .ring .arc{transition:none;stroke-dashoffset:calc(326.7 * (1 - var(--p) / 100))}.js .in .st.no{animation:none}.js .ck::after{opacity:1}.web{scroll-snap-type:none}}
 @media (max-width:980px){
   .web{scroll-snap-type:none}
   .web .s{padding:76px 16px 36px;min-height:auto}
@@ -155,6 +208,11 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
   .t{font-size:14px}
   .week{grid-template-columns:minmax(0,1fr)}
   .funnel div{width:100%!important}
+  .steps,.weeks,.timeline{grid-template-columns:minmax(0,1fr)}
+  .steps::before,.weeks::before,.weeks::after,.timeline::before{display:none}
+  .stat.big b{font-size:40px}.g3.stats{grid-template-columns:minmax(0,1fr)}
+  .say{font-size:16.5px}.tile h3{font-size:18px}
+  .ring{width:120px;height:120px}
   .funnel div span{white-space:normal}
   .foot{flex-direction:column;gap:4px}
 }
@@ -169,246 +227,167 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
 <section class="s dark" id="cover" data-title="Cover">
 <div class="glow" aria-hidden="true"></div>
 <div class="inner">
-<p class="eyebrow rv">Campaign portfolio <i>·</i> <i>Prepared for Meta Robotics, October 2026</i></p>
-<div style="display:flex;flex-direction:column;gap:18px;margin-top:28px">
+<p class="eyebrow rv">Campaign portfolio <i>·</i> <i>for Meta Robotics, October 2026</i></p>
+<div style="display:flex;flex-direction:column;gap:18px;margin-top:auto">
 <h1 class="rv" style="--d:1">Tran The Long</h1>
-<p class="lead rv" style="--d:2">Performance marketer. I manage paid acquisition, mostly on Meta with growing Google Ads work, and build the tracking, landing pages and CRM behind lead generation.</p>
+<p class="lead rv" style="--d:2">Performance marketer. Meta Ads first, Google Ads growing. I build the tracking behind every lead.</p>
 </div>
-<div class="row rv" style="--d:3">
-<span class="tag">Meta Ads lead generation</span><span class="tag">Google Ads &amp; GA4</span><span class="tag">Pixel + Conversions API</span><span class="tag">Landing pages &amp; CRM</span><span class="tag">AI in daily work</span>
+<div class="g3 stats" style="margin-top:auto">
+<div class="stat big rv" style="--d:3"><b data-count="-25" data-suffix="%">−25%</b><span>cost per conversation, same daily spend</span></div>
+<div class="stat big rv" style="--d:4"><b>64% <small>vs</small> 3%</b><span>form starts that became members, by objective</span></div>
+<div class="stat big rv" style="--d:5"><b data-count="523">523</b><span>members through a funnel I own end to end</span></div>
 </div>
-<div class="g4 stats" style="margin-top:auto">
-<div class="stat rv" style="--d:4"><b>−25%</b><span>cost per Messenger conversation at the same daily spend · ThreeTrees, Jul 2026</span></div>
-<div class="stat rv" style="--d:5"><b>64% <small style="font-size:.5em;opacity:.7">vs</small> 3%</b><span>of form starts became members: Lead objective vs a custom-event campaign · Oct 2026</span></div>
-<div class="stat rv" style="--d:6"><b>523</b><span>members through a sign-up funnel I own end to end · TeeTee&amp;Co., by 7 Oct 2026</span></div>
-<div class="stat rv" style="--d:7"><b>11</b><span>of your live Meta ads and their landing page checked from outside · 23 Oct 2026</span></div>
-</div>
-<div class="row rv" style="--d:8">
+<div class="row rv" style="--d:6">
 <a class="btn primary" href="Tran_The_Long_CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>Download CV</a>
-<a class="btn ghost" href="#audit">See the Meta Robotics audit</a>
-<a class="btn ghost" href="mailto:longtt.work@gmail.com">longtt.work@gmail.com</a>
+<a class="btn ghost" href="#audit">See what I found in your ads →</a>
 </div>
 </div>
 </section>
-<section class="s" id="fit" data-title="Fit to the role">
+<section class="s" id="fit" data-title="Role fit">
 <div class="inner">
-<p class="eyebrow rv">01 <i>·</i> Your job description, point by point</p>
-<h2 class="rv" style="--d:1">What you ask for, and the evidence in this portfolio</h2>
-<div class="tw rv" style="--d:2"><table class="t">
-<tr><th>You ask for</th><th>My evidence</th><th>Where</th></tr>
-<tr><td>2+ years hands-on with Meta and Google Ads</td><td>Meta campaigns since 2021, ≈ USD 25k of documented spend. Google is smaller: a ≈ USD 114 Search and Performance Max test (2026) and ≈ USD 540 of Display (2021). I do not claim equal depth on both</td><td>Cases 1 – 3, earlier work</td></tr>
-<tr><td>Lead generation, not awareness</td><td>Click-to-Messenger and lead-form campaigns: −25% cost per conversation; 64% vs 3% form completion by objective</td><td>Cases 1 and 2</td></tr>
-<tr><td>GA4, GTM and Meta Pixel tracking</td><td>GA4 e-commerce events, Google Ads conversion tag, Pixel and Conversions API Lead; a tracking gap found by reconciling CRM and Pixel. Tags in site code: no GTM container in production yet</td><td>Cases 2 and 3</td></tr>
-<tr><td>Budget optimisation, data into action</td><td>Budget moved on cost per conversation and per member; daily report caught a mis-set objective in two days</td><td>Case 1</td></tr>
-<tr><td>Landing pages, CRM, SEO, AI</td><td>Membership funnel I own (523 members); Search Console, schema and Business Profiles; AI for research, copy and checks</td><td>Cases 2 and 3, links</td></tr>
-<tr><td>Proactive, remote, English</td><td>An outside audit of your live ads and landing page before being asked; UK degree taught in English (2:1); GMT+7</td><td>Slides 02, 06, 07</td></tr>
-</table></div>
-<p class="small rv" style="--d:3">Gaps I state up front: my Google Ads spend is small, I have not yet run WhatsApp ads, and my funnels are measured to sign-up, booking and attendance, not yet to purchase.</p>
-<p class="foot"><span>Tran The Long · Campaign portfolio</span><span>Every figure links back to a case in this portfolio</span></p>
+<p class="eyebrow rv">01 <i>·</i> Your must-haves</p>
+<h2 class="rv" style="--d:1">Checked against your job description</h2>
+<div class="g3 tiles">
+<div class="tile rv" style="--d:2"><span class="ck ok" aria-hidden="true"></span><h3>2+ years of paid ads</h3><p>Since 2021 · ≈ USD 25k on Meta</p></div>
+<div class="tile rv" style="--d:3"><span class="ck part" aria-hidden="true"></span><h3>Google and Meta</h3><p>Meta deep · Google smaller, ≈ USD 650</p></div>
+<div class="tile rv" style="--d:4"><span class="ck ok" aria-hidden="true"></span><h3>Lead generation</h3><p>Messenger, lead forms, member sign-ups</p></div>
+<div class="tile rv" style="--d:5"><span class="ck part" aria-hidden="true"></span><h3>GA4, GTM, Pixel</h3><p>GA4, Pixel and CAPI · no GTM container yet</p></div>
+<div class="tile rv" style="--d:6"><span class="ck ok" aria-hidden="true"></span><h3>Data into action</h3><p>Mis-set objective caught in two days</p></div>
+<div class="tile rv" style="--d:7"><span class="ck ok" aria-hidden="true"></span><h3>Remote, English, ownership</h3><p>UK degree in English (2:1) · GMT+7</p></div>
+</div>
+<p class="small rv" style="--d:8"><span class="ck ok mini" aria-hidden="true"></span> shown in this portfolio &nbsp; <span class="ck part mini" aria-hidden="true"></span> partly, and I say so. Not yet: WhatsApp ads, purchase-level tracking.</p>
 </div>
 </section>
 <section class="s dark" id="audit" data-title="Your ads">
 <div class="glow" aria-hidden="true"></div>
-<div class="inner" style="gap:20px">
-<p class="eyebrow rv">02 <i>·</i> Meta Robotics, seen from outside <i>·</i> 23 Oct 2026 <i>·</i> <i>about 11 active ads in the Ad Library, started 19 – 20 Oct</i></p>
-<h2 class="rv" style="--d:1">Your Learn More ads may be sending Meta little booking signal</h2>
-<div class="g3">
-<div class="card rv" style="--d:2"><span class="tag amber">Open House, 25 Oct</span><p class="body">WhatsApp ad; registration runs on Microsoft Forms, so sign-ups cannot be verified through your website's Pixel alone.</p></div>
-<div class="card rv" style="--d:3"><span class="tag">"Another Saturday on a screen?"</span><p class="body">WhatsApp ad for a trial-class enquiry, 7 locations named.</p></div>
-<div class="card rv" style="--d:4"><span class="tag">"Build, test, figure it out"</span><p class="body">Learn More ad to <a href="https://www.metarobotics.sg/screentime.html">/screentime.html</a>, which has the trial form.</p></div>
-</div>
-<div class="card rv" style="--d:5">
-<h3>What the landing page code does</h3>
-<div class="flow">
-<span>Learn More ad</span><em>→</em><span class="ok">GA4 + Ads tag load</span><em>→</em><span class="no">Pixel not started on page view</span><em>→</em><span>Form submitted</span><em>→</em><span class="no">Lead only if Pixel started</span>
-</div>
-<p class="small">In the browser-side code, the Meta Pixel starts inside the WhatsApp-tap handler rather than on page load, and a Google Ads conversion fires on that tap. This may stop PageView and form-booking events reaching Meta; server-side events and other consent states I cannot see from outside.</p>
-</div>
-<div class="g2">
-<div class="card rv" style="--d:6"><h3>First fix, after checking your account</h3><ul class="l"><li>Pixel on page view (with consent where needed)</li><li>Lead on form submit through Pixel and Conversions API, one event ID</li><li>The paid S$30 booking as the primary conversion on both platforms</li><li>WhatsApp tap secondary; Open House sign-up on your own site</li></ul></div>
-<div class="card rv" style="--d:7"><h3>Singapore search, Keyword Planner</h3>
-<div class="bars">
-<div class="bar"><span>coding class for kids</span><span class="track"><span class="fill hi" style="--w:100%"></span></span><span class="v">100 – 1K</span></div>
-<div class="bar"><span>robotics singapore</span><span class="track"><span class="fill hi" style="--w:100%;--d:1"></span></span><span class="v">100 – 1K</span></div>
-<div class="bar"><span>robotics class singapore</span><span class="track"><span class="fill" style="--w:30%;--d:2"></span></span><span class="v">10 – 100</span></div>
-<div class="bar"><span>robotics class for kids</span><span class="track"><span class="fill am" style="--w:2%;--d:3"></span></span><span class="v">no data</span></div>
-</div>
-<p class="small">Monthly searches, Oct 2025 – Sep 2026, ranges. Top-of-page bids for "coding class for kids" ≈ USD 2.7 – 12.8.</p>
-</div>
-</div>
+<div class="inner">
+<p class="eyebrow rv">02 <i>·</i> Before applying, I looked at your live ads</p>
+<h2 class="rv" style="--d:1">Meta may be learning from taps, not bookings</h2>
+<ol class="steps">
+<li class="st rv" style="--d:2"><b>Learn More ad</b><span>one of ~11 live ads</span></li>
+<li class="st rv" style="--d:3"><b>/screentime.html</b><span>trial form on the page</span></li>
+<li class="st ok rv" style="--d:4"><b>GA4 + Google Ads tag</b><span>load on page view</span></li>
+<li class="st no rv" style="--d:5"><b>Meta Pixel</b><span>waits for a WhatsApp tap</span></li>
+<li class="st no rv" style="--d:6"><b>Trial-form Lead</b><span>sent only if the Pixel is loaded</span></li>
+</ol>
+<div class="row rv" style="--d:7"><span class="tag big">Fix 1 · Pixel on page view</span><span class="tag big">Fix 2 · Lead via Pixel + CAPI</span><span class="tag big amber">Fix 3 · paid S$30 booking as the main goal</span></div>
+<p class="small rv" style="--d:8">From your page code and the Meta Ad Library, 23 Oct 2026. Server-side events I cannot see from outside, so I would confirm in the account first.</p>
 </div>
 </section>
 <section class="s" id="case1" data-title="Case 1">
 <div class="inner">
-<p class="eyebrow rv">03 <i>·</i> Case 1 <i>·</i> ThreeTrees, silver jewellery, Hanoi <i>·</i> July 2026</p>
-<h2 class="rv" style="--d:1">25% cheaper conversations at the same daily spend</h2>
-<div class="g4 stats">
-<div class="stat rv" style="--d:2"><b>USD 2.2k</b><span>Meta spend, 1 – 28 July</span></div>
-<div class="stat rv" style="--d:3"><b>1,811</b><span>Messenger conversations started</span></div>
-<div class="stat rv" style="--d:4"><b>USD 1.14</b><span>per conversation on message campaigns</span></div>
-<div class="stat rv" style="--d:5"><b>1.32%</b><span>link CTR on message campaigns</span></div>
-</div>
+<p class="eyebrow rv">03 <i>·</i> ThreeTrees, silver jewellery <i>·</i> July 2026</p>
+<h2 class="rv" style="--d:1">−25% cost per conversation, same spend</h2>
 <div class="g2">
-<div class="card rv" style="--d:6">
-<h3>Same creative, three objectives</h3>
+<div class="card rv" style="--d:2">
+<h3>One creative, three objectives</h3>
 <div class="bars">
-<div class="bar"><span>Sales · 9 Jul</span><span class="track"><span class="fill" style="--w:1%"></span></span><span class="v">0 conv.</span></div>
-<div class="bar"><span>Traffic · 48 clicks</span><span class="track"><span class="fill" style="--w:1%"></span></span><span class="v">0 conv.</span></div>
-<div class="bar"><span>Messages · from 11 Jul</span><span class="track"><span class="fill hi" style="--w:100%;--d:1"></span></span><span class="v">440 conv.</span></div>
+<div class="bar"><span>Sales</span><span class="track"><span class="fill" style="--w:1%"></span></span><span class="v">0</span></div>
+<div class="bar"><span>Traffic</span><span class="track"><span class="fill" style="--w:1%;--d:1"></span></span><span class="v">0</span></div>
+<div class="bar"><span>Messages</span><span class="track"><span class="fill hi" style="--w:100%;--d:2"></span></span><span class="v"><span data-count="440">440</span> chats</span></div>
 </div>
-<p class="small">Our team launched a new chat creative under Sales, then Traffic: VND 0.93M, no conversations. The daily report flagged it within two days; rebuilt as a Messages ad it cost ≈ USD 0.59 per conversation and became the best ad of the month.</p>
 </div>
-<div class="card rv" style="--d:7">
-<h3>Cost per conversation, all message campaigns</h3>
+<div class="card rv" style="--d:3">
+<h3>Cost per conversation, all message ads</h3>
 <div class="bars">
-<div class="bar"><span>1 – 10 Jul · 538 conv.</span><span class="track"><span class="fill" style="--w:100%"></span></span><span class="v">USD 1.37</span></div>
-<div class="bar"><span>12 – 28 Jul · 1,204 conv.</span><span class="track"><span class="fill hi" style="--w:74.9%;--d:1"></span></span><span class="v">USD 1.02</span></div>
-</div>
-<p class="small">Budget moved to the rebuilt ad at about the same daily spend; conversations per day rose from about 54 to 71. Over the same days the other message campaigns improved about 7%. An observational comparison, not a controlled test; 11 Jul, the switch day, is left out of both windows.</p>
+<div class="bar"><span>1 – 10 Jul</span><span class="track"><span class="fill" style="--w:100%"></span></span><span class="v">USD 1.37</span></div>
+<div class="bar"><span>12 – 28 Jul</span><span class="track"><span class="fill hi" style="--w:74.5%;--d:1"></span></span><span class="v">USD 1.02</span></div>
 </div>
 </div>
-<p class="foot"><span>Source: 28 daily Meta exports and daily reports, ThreeTrees, July 2026</span><span>My role: objectives, budget, test decisions, daily report</span></p>
+</div>
+<p class="say rv" style="--d:4">The daily report caught a chat creative launched under the wrong objective. Rebuilt as a Messages ad, it took the budget. The other message ads improved 7% over the same days, so read this as an observation, not a test.</p>
 </div>
 </section>
 <section class="s" id="case2" data-title="Case 2">
 <div class="inner">
-<p class="eyebrow rv">04 <i>·</i> Case 2 <i>·</i> TeeTee&amp;Co., membership and workshops <i>·</i> May – Oct 2026</p>
+<p class="eyebrow rv">04 <i>·</i> TeeTee&amp;Co., membership funnel <i>·</i> Oct 2026</p>
 <h2 class="rv" style="--d:1">Optimise for the sign-up, not the click</h2>
-<div class="flow rv" style="--d:2"><span>Meta ad</span><em>→</em><span>Landing page</span><em>→</em><span>Sign-up form</span><em>→</em><span>CRM with UTM and fbclid</span><em>→</em><span>Pixel + Conversions API Lead</span><em>→</em><span>Workshop booking</span><em>→</em><span>Check-in</span></div>
-<div class="g2">
-<div class="card rv" style="--d:3">
-<h3>Form starts that became members, 3 – 8 Oct</h3>
-<div class="bars">
-<div class="bar"><span>Lead objective · 87 → 56</span><span class="track"><span class="fill hi" style="--w:64%"></span></span><span class="v">64%</span></div>
-<div class="bar"><span>Custom event "form start" · 113 → 3</span><span class="track"><span class="fill am" style="--w:3%;--d:1"></span></span><span class="v">3%</span></div>
+<div class="g3">
+<div class="card center rv" style="--d:2">
+<div class="ring" style="--p:64" role="img" aria-label="64 percent"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><circle class="arc" cx="60" cy="60" r="52"/></svg><b>64%</b></div>
+<p>Lead objective<br><span class="muted">87 form starts → 56 members</span></p>
 </div>
-<p class="small">Optimising for an earlier step found people who start forms, not people who finish them. On 1 – 7 Oct the Lead objective brought 51 members for VND 3.05M (≈ USD 2.3 each); the custom-event campaign brought 1 for VND 3.18M.</p>
+<div class="card center rv" style="--d:3">
+<div class="ring am" style="--p:3" role="img" aria-label="3 percent"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><circle class="arc" cx="60" cy="60" r="52"/></svg><b>3%</b></div>
+<p>Custom "form start" event<br><span class="muted">113 form starts → 3 members</span></p>
 </div>
 <div class="card rv" style="--d:4">
 <h3>After the sign-up</h3>
 <div class="bars">
-<div class="bar"><span>Members to 21 Sep 2026</span><span class="track"><span class="fill" style="--w:100%"></span></span><span class="v">184</span></div>
-<div class="bar"><span>Booked an experience session</span><span class="track"><span class="fill hi" style="--w:16.3%;--d:1"></span></span><span class="v">30 · 16.3%</span></div>
+<div class="bar s2"><span>Members, 21 Sep</span><span class="track"><span class="fill" style="--w:100%"></span></span><span class="v">184</span></div>
+<div class="bar s2"><span>Booked a session</span><span class="track"><span class="fill hi" style="--w:16.3%;--d:1"></span></span><span class="v">30 · 16%</span></div>
 </div>
-<p class="small">Not all bookings came from ads. Separately, staff recorded 53 workshop check-ins by 12 Oct, and attendees move into a post-visit email journey. First purchase per member is not yet measured, so I do not claim a cost per paying customer.</p>
+<p class="muted small">523 members by 7 Oct · ≈ USD 2.3 each on the Lead objective</p>
 </div>
 </div>
-<div class="g4 stats">
-<div class="stat rv" style="--d:5"><b>523</b><span>members by 7 Oct 2026</span></div>
-<div class="stat rv" style="--d:6"><b class="sm">USD 2.3 / 7.5</b><span>per member: Lead objective / blended</span></div>
-<div class="stat rv" style="--d:7"><b>61 / 65</b><span>members vs plan, 1 – 8 Oct</span></div>
-<div class="stat rv" style="--d:8"><b>≈ 5%</b><span>of page views reached Meta before the consent fix</span></div>
-</div>
-<p class="small rv" style="--d:9"><b>Tracking gap I found:</b> from 15 Oct, Meta reported 0 – 2 sign-ups a day while the CRM showed 12 – 15. The cookie-consent set-up was blocking the Pixel, and server-side Lead events sat behind the same check. On 21 Oct the Pixel and server-side event set-up was revised to close the gap; coverage after the change is still being checked.</p>
-<p class="foot"><span>Sources: TeeTee&amp;Co. CRM, ads system logs and workshop records, Sept – Oct 2026</span><span>My role: owner of the membership funnel and its tracking</span></p>
+<p class="say rv" style="--d:5">I also reconciled CRM sign-ups with Pixel events and found Meta was seeing about 5% of page views behind a consent set-up, then revised it.</p>
 </div>
 </section>
 <section class="s" id="case3" data-title="Case 3">
 <div class="inner">
-<p class="eyebrow rv">05 <i>·</i> Case 3 <i>·</i> Google for ThreeTrees and TeeTee&amp;Co. <i>·</i> Jun – Oct 2026</p>
-<h2 class="rv" style="--d:1">Search, Maps and measurement, built from scratch</h2>
+<p class="eyebrow rv">05 <i>·</i> Google for ThreeTrees and TeeTee&amp;Co. <i>·</i> 2026</p>
+<h2 class="rv" style="--d:1">Search, Maps and measurement</h2>
 <div class="g4 stats">
-<div class="stat rv" style="--d:2"><b>57 → 83</b><span>pages indexed in Google, 9 → 15 Oct (Search Console)</span></div>
-<div class="stat rv" style="--d:3"><b>92</b><span>Lighthouse SEO score; mobile performance 79 – 95</span></div>
-<div class="stat rv" style="--d:4"><b>33 / 33</b><span>products submitted to Merchant Center (review pending)</span></div>
-<div class="stat rv" style="--d:5"><b>2</b><span>Business Profiles verified, TeeTee&amp;Co. created new</span></div>
+<div class="stat rv" style="--d:2"><b>57 → 83</b><span>pages indexed in a week</span></div>
+<div class="stat rv" style="--d:3"><b data-count="92">92</b><span>Lighthouse SEO score</span></div>
+<div class="stat rv" style="--d:4"><b>3.9%</b><span>Search CTR, ThreeTrees test</span></div>
+<div class="stat rv" style="--d:5"><b data-count="2">2</b><span>Business Profiles verified</span></div>
 </div>
-<div class="g75">
+<div class="row rv" style="--d:6"><span class="tag big">GA4 e-commerce events</span><span class="tag big">Google Ads conversion tag</span><span class="tag big">Search Console</span><span class="tag big">Merchant Center, 33 products</span><span class="tag big">Schema + hreflang</span></div>
+<p class="say rv" style="--d:7">The Google Ads test was small (≈ USD 114, Search and Performance Max) and counted contact and direction taps, not leads. For you, the paid booking would be the goal.</p>
+</div>
+</section>
+<section class="s dark" id="plan" data-title="First 30 days">
+<div class="glow" aria-hidden="true"></div>
+<div class="inner">
+<p class="eyebrow rv">06 <i>·</i> My first 30 days at Meta Robotics</p>
+<h2 class="rv" style="--d:1">One number: cost per paid session, by centre</h2>
+<ol class="weeks">
+<li class="rv" style="--d:2"><b>Week 1</b><h3>Measure</h3><p>Booking tracked on both platforms</p></li>
+<li class="rv" style="--d:3"><b>Week 2</b><h3>Find waste</h3><p>Cut what brings chats, not bookings</p></li>
+<li class="rv" style="--d:4"><b>Week 3</b><h3>Test</h3><p>Age-specific creatives, proof-led ads</p></li>
+<li class="rv" style="--d:5"><b>Week 4</b><h3>Decide</h3><p>Scale or stop; plan the holidays</p></li>
+</ol>
 <div class="card rv" style="--d:6">
-<h3>Google Ads test for ThreeTrees, June – July 2026 (under my lead)</h3>
-<div class="tw"><table class="t">
-<tr><th>Campaign</th><th class="n">Spend</th><th class="n">Clicks</th><th class="n">CTR</th><th class="n">Conv.</th><th class="n">Per conv.</th></tr>
-<tr><td>Search, 10 broad-match jewellery keywords</td><td class="n">USD 52</td><td class="n">170</td><td class="n">3.9%</td><td class="n">125</td><td class="n">USD 0.42</td></tr>
-<tr><td>Performance Max, local store visits</td><td class="n">USD 61</td><td class="n">990</td><td class="n">1.0%</td><td class="n">134</td><td class="n">USD 0.46</td></tr>
-</table></div>
-<p class="small">Conversions here are Google's "contact" and "get directions" goals, not leads. 125 such actions from 170 Search clicks means they are engagement, not verified leads: both the search terms and the goal set-up needed review. For you the paid booking would be primary and these secondary.</p>
-</div>
-<div class="card rv" style="--d:7">
-<h3>What I set up</h3>
-<ul class="l">
-<li>GA4 e-commerce events and Google Ads conversion tag (in site code, no GTM container yet)</li>
-<li>Search Console, bilingual sitemaps, schema, hreflang; 20 posts rewritten in two languages</li>
-<li>Google Business Profiles and map embed; 60 local keywords researched</li>
-</ul>
-</div>
-</div>
-<p class="foot"><span>Implementation outcomes; organic traffic and sales from this work were not yet reported, so I do not claim growth</span><span>Live site: teeteeco.com</span></p>
-</div>
-</section>
-<section class="s" id="plan" data-title="Search plan">
-<div class="inner">
-<p class="eyebrow rv">06 <i>·</i> A plan written for you <i>·</i> not past results</p>
-<h2 class="rv" style="--d:1">How I would set up Google Search for Meta Robotics</h2>
-<div class="tw rv" style="--d:2"><table class="t">
-<tr><th>Campaign</th><th>Keywords (phrase / exact) · Singapore searches a month</th><th>Landing page</th></tr>
-<tr><td>Brand</td><td>Meta Robotics, Meta Robotics Singapore, misspellings</td><td>Home</td></tr>
-<tr><td>Classes by need</td><td>robotics singapore, coding for kids, coding class for kids (100 – 1K each) · robotics for kids, robotics class singapore, coding class singapore (10 – 100)</td><td>Programme pages by age</td></tr>
-<tr><td>Near me, by centre</td><td>7 ad groups, "robotics class" + each centre's area, tight radius</td><td>Each centre's page</td></tr>
-<tr><td>Assessment and DSA</td><td>robotics assessment for kids (Novena, Katong) · robotics DSA, Jan – Jun</td><td>RDA and DSA pages</td></tr>
-<tr><td>Competitions and holidays</td><td>robotics competition singapore (10 – 100) · holiday camp singapore (100 – 1K), 3 – 4 weeks before each break</td><td>Programme and holiday pages</td></tr>
-</table></div>
-<div class="g2">
-<div class="card rv" style="--d:3"><h3>Decisions by condition, not a fixed recipe</h3><ul class="l"><li>No reliable conversion yet: fix tracking before changing bidding</li><li>Steady paid bookings: Maximise Conversions, then a target CPA</li><li>Too few bookings: qualified leads as an interim signal</li><li>Low volume per centre: merge ad groups, keep reporting by centre</li></ul></div>
-<div class="card rv" style="--d:4"><h3>Ads only from facts on your site</h3><ul class="l"><li>"Robotics &amp; Coding for Ages 3–16" · "7 Centres Across Singapore" · "Book a S$30 Discovery Session" · "2-Time Parents World Award Winner"</li><li>Negatives from day one: free, toy, kit, jobs, salary, university, adult</li><li>Meta side: parent audiences only, by child age and centre radius, plus retargeting of visitors who did not book</li></ul></div>
-</div>
-<p class="foot"><span>From your website, the Meta Ad Library and Keyword Planner (Singapore), 23 Oct 2026</span><span>Budgets and bids are set in week 1 from your real numbers</span></p>
-</div>
-</section>
-<section class="s" id="days" data-title="First 30 days">
-<div class="inner">
-<p class="eyebrow rv">07 <i>·</i> My first 30 days</p>
-<h2 class="rv" style="--d:1">Manage to one number: cost per paid discovery session, by centre and age</h2>
-<div class="g75">
-<div>
-<div class="week rv" style="--d:2"><b>Week 1</b><div><h3>Make the chain measurable</h3><p class="body">Audit GA4, Google Ads conversions, Pixel and CAPI; check how paid bookings are attributed and how many there are a month, then pick the most reliable booking or qualified-lead signal for each platform; one weekly sheet from lead to enrolment, by centre and campaign.</p></div></div>
-<div class="week rv" style="--d:3"><b>Week 2</b><div><h3>Find the waste</h3><p class="body">Split spend and cost per booking by centre, programme, placement and search term; cut what brings chats but no bookings; add negatives.</p></div></div>
-<div class="week rv" style="--d:4"><b>Week 3</b><div><h3>First tests, one variable each</h3><p class="body">Age-specific creatives, proof-led ads with your awards, and how the S$30 session is framed against free trials elsewhere.</p></div></div>
-<div class="week rv" style="--d:5"><b>Week 4</b><div><h3>Decide, then plan the holidays</h3><p class="body">Keep, scale or stop each test on cost per paid booking; plan the next holiday-programme push; send a one-page report.</p></div></div>
-</div>
-<div style="display:flex;flex-direction:column;gap:18px">
-<div class="card k rv" style="--d:6"><h3>Every week from me</h3><ul class="l"><li>Spend, paid bookings, cost per booking, enrolments by centre</li><li>Three insights, each with the action taken</li><li>Tests running, decided and next</li><li>Tracking issues found and fixed</li></ul></div>
-<div class="card rv" style="--d:7"><h3>Working arrangement</h3><ul class="l"><li>Hanoi, GMT+7: one hour behind Singapore</li><li>Written updates in English, calls whenever needed</li><li>AI for research, copy variants and anomaly checks; every budget decision reviewed by me</li></ul></div>
+<h3>Google Search demand in Singapore, a month (Keyword Planner)</h3>
+<div class="bars">
+<div class="bar"><span>coding class for kids</span><span class="track"><span class="fill hi" style="--w:100%"></span></span><span class="v">100 – 1K</span></div>
+<div class="bar"><span>robotics singapore</span><span class="track"><span class="fill hi" style="--w:100%;--d:1"></span></span><span class="v">100 – 1K</span></div>
+<div class="bar"><span>holiday camp singapore</span><span class="track"><span class="fill hi" style="--w:100%;--d:2"></span></span><span class="v">100 – 1K</span></div>
+<div class="bar"><span>robotics class singapore</span><span class="track"><span class="fill" style="--w:30%;--d:3"></span></span><span class="v">10 – 100</span></div>
 </div>
 </div>
 </div>
 </section>
 <section class="s" id="earlier" data-title="Earlier work">
 <div class="inner">
-<p class="eyebrow rv">08 <i>·</i> Earlier campaigns <i>·</i> 2021 – 2024</p>
-<h2 class="rv" style="--d:1">Lead generation since 2021, mostly on Meta</h2>
-<div class="tw rv" style="--d:2"><table class="t">
-<tr><th>Client / employer</th><th>Year</th><th>Objective</th><th class="n">Spend</th><th class="n">Result</th></tr>
-<tr><td>BM Agency (Hai Phat Land), real estate</td><td>2021</td><td>Messages, lead forms</td><td class="n">≈ USD 13.3k</td><td class="n">226 form leads, 2,837 conversations</td></tr>
-<tr><td>BM Agency, Google Display test</td><td>2021</td><td>Conversions</td><td class="n">≈ USD 540</td><td class="n">7,817 clicks, 43 recorded conversions</td></tr>
-<tr><td>Cixi Serviced Apartment</td><td>2023 – 24</td><td>Messages</td><td class="n">–</td><td class="n">≈ USD 0.19 per conversation †</td></tr>
-<tr><td>Consolism &amp; Monolife, fashion</td><td>2023</td><td>Messages, sales</td><td class="n">≈ USD 4.5k, 13 accounts</td><td class="n">results not retained</td></tr>
-<tr><td>S.QEEN, fashion</td><td>Oct 2024</td><td>Messages</td><td class="n">≈ USD 330</td><td class="n">148 conversations, ≈ USD 2.2 each</td></tr>
-</table></div>
-<div class="g3">
-<div class="card rv" style="--d:3"><h3>Real estate</h3><p class="body">Messages are cheap and form leads are not, but quality only shows when sales follow up, so I track the step after the message.</p></div>
-<div class="card rv" style="--d:4"><h3>Apartments and fashion</h3><p class="body">Click-to-Messenger works when someone replies fast; cost per conversation means little without a reply process behind it.</p></div>
-<div class="card rv" style="--d:5"><h3>Small budgets</h3><p class="body">With a few hundred dollars a month, structure and creative matter more than bidding tricks.</p></div>
-</div>
-<p class="foot"><span>† approximate, from memory: these accounts belonged to employers and clients and closed with each engagement</span><span>About USD 25k of documented Meta spend</span></p>
+<p class="eyebrow rv">07 <i>·</i> Lead generation since 2021</p>
+<h2 class="rv" style="--d:1">Earlier campaigns, 2021 – 2024</h2>
+<ol class="timeline">
+<li class="rv" style="--d:2"><b>2021</b><h3>BM Agency, real estate</h3><p>≈ USD 13.3k → 226 form leads, 2,837 chats</p></li>
+<li class="rv" style="--d:3"><b>2021</b><h3>Google Display test</h3><p>≈ USD 540 → 7,817 clicks</p></li>
+<li class="rv" style="--d:4"><b>2023</b><h3>Consolism, fashion</h3><p>≈ USD 4.5k across 13 ad accounts</p></li>
+<li class="rv" style="--d:5"><b>2023 – 24</b><h3>Cixi Apartments</h3><p>≈ USD 0.19 per chat, from memory</p></li>
+<li class="rv" style="--d:6"><b>2024</b><h3>S.QEEN, fashion</h3><p>148 chats at ≈ USD 2.2 each</p></li>
+<li class="rv now" style="--d:7"><b>2026</b><h3>Three Trees Group</h3><p>Team lead, two brands</p></li>
+</ol>
+<p class="say rv" style="--d:8">What it taught me: cheap chats mean little until someone follows them up, so I track the step after the message.</p>
 </div>
 </section>
 <section class="s dark" id="links" data-title="Links">
 <div class="glow" aria-hidden="true"></div>
 <div class="inner">
-<p class="eyebrow rv">09 <i>·</i> Resources and contact</p>
-<h2 class="rv" style="--d:1">Selected work, sources and contact</h2>
+<p class="eyebrow rv">08 <i>·</i> Details and contact</p>
+<h2 class="rv" style="--d:1">Everything else is one click away</h2>
 <div class="links">
-<a class="card rv" style="--d:2" href="Tran_The_Long_CV.pdf"><strong>CV <span aria-hidden="true">↓</span></strong><small>Two pages, PDF</small></a>
-<a class="card rv" style="--d:3" href="Tran_The_Long_Portfolio.pdf"><strong>Portfolio, print version <span aria-hidden="true">↓</span></strong><small>Six A4 pages, PDF, same figures as this page</small></a>
-<a class="card rv" style="--d:4" href="https://teeteeco.com"><strong>teeteeco.com <span aria-hidden="true">↗</span></strong><small>Live site: GA4, Google Ads and Meta tracking, SEO, schema, Business Profile</small></a>
-<a class="card rv" style="--d:5" href="https://member.teeteeco.com"><strong>member.teeteeco.com <span aria-hidden="true">↗</span></strong><small>The membership landing page and sign-up form from Case 2</small></a>
-<a class="card rv" style="--d:6" href="https://github.com/longtt-marketing/taste-brief"><strong>Taste Brief code <span aria-hidden="true">↗</span></strong><small>The GitHub repository of the AI ad-planning agent, built with AI coding tools</small></a>
-<a class="card rv" style="--d:7" href="https://devpost.com/software/taste-brief-s4k0cg"><strong>Taste Brief <span aria-hidden="true">↗</span></strong><small>AI agent for ad planning, submitted to the Qloo hackathon 2026</small></a>
-<a class="card rv" style="--d:8" href="https://www.facebook.com/ads/library/?active_status=active&amp;ad_type=all&amp;country=SG&amp;q=Meta%20Robotics&amp;search_type=keyword_unordered"><strong>Your ads in the Ad Library <span aria-hidden="true">↗</span></strong><small>The source for slide 02; anyone can reproduce it</small></a>
-<a class="card rv" style="--d:9" href="https://www.metarobotics.sg/screentime.html"><strong>/screentime.html <span aria-hidden="true">↗</span></strong><small>The landing page checked in slide 02</small></a>
-<a class="card rv" style="--d:10" href="mailto:longtt.work@gmail.com"><strong>Contact <span aria-hidden="true">→</span></strong><small>longtt.work@gmail.com · +84 822 778 886 · Hanoi, GMT+7</small></a>
+<a class="card rv" style="--d:2" href="Tran_The_Long_CV.pdf"><strong>CV <span aria-hidden="true">↓</span></strong><small>Two pages</small></a>
+<a class="card rv" style="--d:3" href="Tran_The_Long_Portfolio.pdf"><strong>Full portfolio <span aria-hidden="true">↓</span></strong><small>Seven pages with every figure and source</small></a>
+<a class="card rv" style="--d:4" href="https://teeteeco.com"><strong>teeteeco.com <span aria-hidden="true">↗</span></strong><small>Tracking, SEO and Business Profile I set up</small></a>
+<a class="card rv" style="--d:5" href="https://member.teeteeco.com"><strong>member.teeteeco.com <span aria-hidden="true">↗</span></strong><small>The sign-up page from Case 2</small></a>
+<a class="card rv" style="--d:6" href="https://devpost.com/software/taste-brief-s4k0cg"><strong>Taste Brief <span aria-hidden="true">↗</span></strong><small>AI ad-planning agent, Qloo hackathon 2026</small></a>
+<a class="card rv" style="--d:7" href="mailto:longtt.work@gmail.com"><strong>Contact <span aria-hidden="true">→</span></strong><small>longtt.work@gmail.com · +84 822 778 886</small></a>
 </div>
-<p class="foot"><span>Tran The Long · Performance marketing, Meta and Google Ads</span><span>Figures checked against source files, 23 Oct 2026</span></p>
+<p class="small rv" style="--d:8">Audit sources: <a href="https://www.facebook.com/ads/library/?active_status=active&amp;ad_type=all&amp;country=SG&amp;q=Meta%20Robotics&amp;search_type=keyword_unordered">your ads in the Meta Ad Library</a> · <a href="https://www.metarobotics.sg/screentime.html">/screentime.html</a> · USD at about VND 26,000</p>
 </div>
 </section>
 </main>
@@ -424,7 +403,7 @@ ul.l{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:7px;font-
     return (n < 0 ? "−" : "") + v + (el.dataset.suffix || "");
   }
   function countUp(el) {
-    var end = parseFloat(el.dataset.count), t0 = null, dur = 1200;
+    var end = parseFloat(el.dataset.count), t0 = null, dur = 700;
     if (reduce) { el.textContent = fmt(end, el); return; }
     function step(t) {
       if (t0 === null) t0 = t;
