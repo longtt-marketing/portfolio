@@ -1,0 +1,61 @@
+{
+  "status": "Proposed work sample; not launched or historical performance",
+  "as_of": "2026-10-26",
+  "offer_url": "https://www.metarobotics.sg/rda.html",
+  "settings": [
+    ["Scope", "One RDA offer. Start with one non-brand intent group; brand RDA terms are prepared separately and remain paused until existing coverage is checked."],
+    ["Media allocation", "30% of pilot media. S$450 in the base plan, released within the weekly total cap; unused spend is not a failure."],
+    ["Locations", "People in or regularly in Singapore. Confirm realistic catchments for Novena and Katong; use booking centre/postcode to review serviceability."],
+    ["Networks and language", "English Search pilot. Review Search partners separately before enabling. Do not expand into Display from this test."],
+    ["Conversion goal", "One primary stage: validated paid booking, or qualified lead while paid volume is insufficient. Keep other stages secondary; check custom goals, which can still bid on included secondary actions."],
+    ["Bidding", "Choose from verified account history and outcome volume. S$38 is a blended commercial planning ceiling, not a Google target CPA or max CPC."],
+    ["Pacing", "Review actual spend daily. An average daily budget is not a hard daily cap. Keep a reserve and pause before the approved total is exhausted."],
+    ["Destination", "Use the RDA page only for RDA intent. Separate Trial Class, holiday and generic class research into a later test with a matching page."],
+    ["Attribution", "One child/offer ID, original source and assisted touchpoints. Join qualified, paid, refunded, attended and enrolled states without summing them as one conversion total."]
+  ],
+  "keywords": [
+    ["robotics assessment singapore", "Exact", "Non-brand RDA", "Proposed start"],
+    ["robotics assessment for kids", "Phrase", "Non-brand RDA", "Proposed start"],
+    ["robotics discovery session", "Phrase", "Non-brand RDA", "Proposed start"],
+    ["robotics assessment novena", "Exact", "Non-brand RDA", "Proposed start"],
+    ["robotics assessment katong", "Exact", "Non-brand RDA", "Proposed start"],
+    ["robotics assessment near me", "Phrase", "Non-brand RDA", "Proposed start"],
+    ["meta robotics assessment", "Exact", "Brand RDA", "Paused; check overlap"],
+    ["meta robotics rda", "Exact", "Brand RDA", "Paused; check overlap"],
+    ["meta robotics novena rda", "Exact", "Brand RDA", "Paused; check overlap"],
+    ["robotics class singapore", "Phrase", "Later class test", "Paused; different intent"],
+    ["robotics trial class", "Phrase", "Later trial test", "Paused; different offer"],
+    ["holiday robotics camp", "Phrase", "Later holiday test", "Paused; different offer"]
+  ],
+  "negatives": ["jobs", "job", "salary", "career", "careers", "university degree", "engineering degree", "adult course", "adult courses", "robot kit", "robot kits", "robot toy", "robot toys", "repair", "repairing", "free download"],
+  "negative_note": "Proposed phrase negatives. Review query context first; do not blanket-exclude coding, STEM, LEGO, price or free trial. Negative keywords need explicit variants; review actual search terms twice weekly.",
+  "ads": [
+    {
+      "name": "A: Find a starting point",
+      "headlines": ["Robotics Assessment", "S$30 Discovery Session", "Novena & Katong Centres", "Where Should Your Child Start?", "45-Minute Robotics Activity", "15-Minute Parent Consultation", "Personal Learning Report", "Explore Robotics Together", "Ask About Available Sessions", "Meet Meta Robotics"],
+      "descriptions": ["Explore how your child learns. A personal report and parent consultation included.", "Book a 60-minute RDA at Novena or Katong. Ask our team about available sessions.", "Try a 45-minute robotics activity, then a 15-minute consultation for parents.", "Not sure where to start? Ask about our S$30 Robotics Discovery Assessment."]
+    },
+    {
+      "name": "B: See their approach",
+      "headlines": ["See How Your Child Learns", "Explore A Robotics Challenge", "S$30 Robotics Assessment", "A Personal Report Included", "Talk Through The Next Step", "Hands-On Discovery Session", "Novena Or Katong", "Activity And Parent Feedback", "Discover Their Starting Point", "Ask Our Team About RDA"],
+      "descriptions": ["See how your child approaches a hands-on activity. Discuss the next step with our team.", "A 45-minute activity, 15-minute parent consultation and personal report for S$30.", "Explore robotics at Novena or Katong. Contact our team to confirm session availability.", "A discovery session for parents considering robotics. Learn more about the RDA."]
+    }
+  ],
+  "copy_note": "Draft assets for approval. Confirm all offer wording and capacity. Both concepts use the same offer; asset reports alone do not establish a controlled A/B winner. Do not add guaranteed learning outcomes or fabricated testimonials.",
+  "measurement": [
+    ["WhatsApp open", "A diagnostic click only; no evidence that a message was sent or received."],
+    ["Enquiry received", "One deduplicated child/offer record with actual received contact; retain consent and source/unknown state."],
+    ["Qualified", "Age/programme, serviceable centre, valid contact and genuine interest checked by sales."],
+    ["Paid booking", "Payment matched to the booking; exclude unpaid, cancelled and refunded records under the agreed window."],
+    ["Attended / enrolled", "Separate downstream states, dates and payment records; show pending outcomes until the cohort closes."],
+    ["QA acceptance", "Consent allowed/refused, invalid input, duplicate, refresh and unpaid order. Store expected/actual result, time and reviewer; these are planned checks, not claimed passes."]
+  ],
+  "sources": [
+    "https://www.metarobotics.sg/rda.html",
+    "https://support.google.com/google-ads/answer/7684791?hl=en",
+    "https://support.google.com/google-ads/answer/1722038?hl=en",
+    "https://support.google.com/google-ads/answer/2453972?hl=en",
+    "https://support.google.com/google-ads/answer/10486637?hl=en",
+    "https://support.google.com/google-ads/answer/11461796?hl=en"
+  ]
+}

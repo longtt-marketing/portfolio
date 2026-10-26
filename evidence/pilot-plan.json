@@ -98,7 +98,8 @@
     "scale_step_fraction_range": [
       0.1,
       0.15
-    ]
+    ],
+    "scale_only_after": "Learning stable and acquisition cohort mature; 72 hours is a minimum review interval, not automatic scaling"
   },
   "note": "Targets and commercial assumptions are chosen for a testable proposal, not market benchmarks, verified capacity, past achievements or authorisation to spend.",
   "base_economics": {
