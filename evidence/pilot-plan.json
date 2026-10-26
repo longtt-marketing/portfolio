@@ -1,110 +1,464 @@
 {
-  "status": "proposed_planning_assumptions_not_observed_results",
-  "as_of": "2026-10-26",
+  "version": "2026-10-26-v2",
+  "status": "PROPOSED PLAN; not historical results or spend approval",
   "currency": "SGD",
-  "offer": {
-    "name": "RDA",
-    "public_price": 30,
-    "source": "https://www.metarobotics.sg/rda.html",
-    "scope": "Novena and Katong, subject to availability"
-  },
-  "media_budget": 1500,
-  "one_month_management_fee": 2000,
-  "channels": {
-    "meta_prospecting": 900,
-    "google_search": 450,
-    "remarketing_if_eligible": 150
-  },
-  "weekly_media_caps": [
-    0,
-    500,
-    500,
-    500
-  ],
-  "hours_per_week": 20,
-  "weeks": 4,
-  "assumed_capacity": 60,
-  "assumed_net_session_contribution": 10,
-  "assumed_course_contribution_first_90_days": 500,
-  "contribution_reserve_fraction": 0.2,
-  "exclusions": "Additional creative/tools, nonrecoverable taxes or fees not already included, fixed overhead. Deduct actual amounts separately. Do not double count RDA if credited to course fees.",
+  "start": "2026-11-02",
+  "acquisition_start": "2026-11-09",
+  "acquisition_end": "2026-11-29",
+  "outcome_close": "2026-12-29",
+  "final_contribution_close": "2027-03-29",
+  "media": 3000,
+  "management": 2000,
+  "followup": 300,
+  "additional": 700,
+  "rda_contribution": 10,
+  "course_contribution": 450,
+  "reserve": 0.2,
+  "capacity_gross_bookings": 96,
   "scenarios": {
     "downside": {
-      "enquiries": 65,
-      "qualified": 42,
-      "net_paid_bookings": 24,
-      "attended": 18,
-      "enrolments": 4,
+      "enquiries": 140,
+      "qualified": 84,
+      "gross_paid": 46,
+      "booking_refunds": 4,
+      "attended": 32,
+      "gross_enrolled": 9,
+      "enrolment_refunds": 1,
       "calculated": {
-        "media_per_enquiry": 23.08,
-        "media_per_qualified": 35.71,
-        "media_per_paid_booking": 62.5,
-        "media_per_enrolment": 375.0,
-        "media_and_fee_per_enrolment": 875.0,
-        "rda_gross_receipts": 720,
-        "contribution_before_marketing": 2240,
-        "contribution_after_media_and_fee": -1260,
-        "contribution_after_reserve_media_and_fee": -1708.0
+        "net_paid": 42,
+        "net_enrolled": 8,
+        "cpql": 35.714285714285715,
+        "paid_cpa": 71.42857142857143,
+        "media_cac": 375,
+        "all_cost_cac": 750,
+        "contribution": 4020,
+        "after_cost": -1980,
+        "after_reserve": -2784
       }
     },
     "base": {
-      "enquiries": 100,
-      "qualified": 70,
-      "net_paid_bookings": 40,
-      "attended": 32,
-      "enrolments": 8,
+      "enquiries": 200,
+      "qualified": 140,
+      "gross_paid": 74,
+      "booking_refunds": 4,
+      "attended": 56,
+      "gross_enrolled": 19,
+      "enrolment_refunds": 1,
       "calculated": {
-        "media_per_enquiry": 15.0,
-        "media_per_qualified": 21.43,
-        "media_per_paid_booking": 37.5,
-        "media_per_enrolment": 187.5,
-        "media_and_fee_per_enrolment": 437.5,
-        "rda_gross_receipts": 1200,
-        "contribution_before_marketing": 4400,
-        "contribution_after_media_and_fee": 900,
-        "contribution_after_reserve_media_and_fee": 20.0
+        "net_paid": 70,
+        "net_enrolled": 18,
+        "cpql": 21.428571428571427,
+        "paid_cpa": 42.857142857142854,
+        "media_cac": 166.66666666666666,
+        "all_cost_cac": 333.3333333333333,
+        "contribution": 8800,
+        "after_cost": 2800,
+        "after_reserve": 1040
       }
     },
     "upside": {
-      "enquiries": 130,
-      "qualified": 95,
-      "net_paid_bookings": 55,
-      "attended": 47,
-      "enrolments": 14,
+      "enquiries": 260,
+      "qualified": 195,
+      "gross_paid": 96,
+      "booking_refunds": 5,
+      "attended": 76,
+      "gross_enrolled": 28,
+      "enrolment_refunds": 1,
       "calculated": {
-        "media_per_enquiry": 11.54,
-        "media_per_qualified": 15.79,
-        "media_per_paid_booking": 27.27,
-        "media_per_enrolment": 107.14,
-        "media_and_fee_per_enrolment": 250.0,
-        "rda_gross_receipts": 1650,
-        "contribution_before_marketing": 7550,
-        "contribution_after_media_and_fee": 4050,
-        "contribution_after_reserve_media_and_fee": 2540.0
+        "net_paid": 91,
+        "net_enrolled": 27,
+        "cpql": 15.384615384615385,
+        "paid_cpa": 32.967032967032964,
+        "media_cac": 111.11111111111111,
+        "all_cost_cac": 222.22222222222223,
+        "contribution": 13060,
+        "after_cost": 7060,
+        "after_reserve": 4448
       }
     }
   },
-  "cohort": "Acquire in weeks 2-4; initial report end week 4; outcome close 30 days after final lead; course contribution measured over first 90 days per enrolment.",
-  "gates": {
-    "qa_checks": 6,
-    "record_status_completeness_min": 0.95,
-    "duplicate_rate_max": 0.01,
-    "inspect_spend_without_qualified": 75,
-    "observation_days": 7,
-    "mature_paid_bookings_before_scale": 20,
-    "attendance_min": 0.8,
-    "attended_to_enrolment_min": 0.25,
-    "scale_interval_hours": 72,
-    "scale_step_fraction_range": [
-      0.1,
-      0.15
-    ],
-    "scale_only_after": "Learning stable and acquisition cohort mature; 72 hours is a minimum review interval, not automatic scaling"
+  "base_channels": {
+    "Meta": {
+      "media": 1800,
+      "enquiries": 125,
+      "qualified": 85,
+      "net_paid": 42,
+      "attended": 34,
+      "net_enrolled": 11
+    },
+    "Search": {
+      "media": 1200,
+      "enquiries": 75,
+      "qualified": 55,
+      "net_paid": 28,
+      "attended": 22,
+      "net_enrolled": 7
+    }
   },
-  "note": "Targets and commercial assumptions are chosen for a testable proposal, not market benchmarks, verified capacity, past achievements or authorisation to spend.",
-  "base_economics": {
-    "course_contribution_breakeven": 387.5,
-    "course_contribution_breakeven_with_reserve": 496.875,
-    "planning_blended_paid_booking_cpa_ceiling": 38
-  }
+  "timeline": [
+    [
+      "D01",
+      "2026-11-02",
+      "Agree scope, data owners, offer and budget",
+      "Long + Meta Robotics manager",
+      "Document scope and approval owner"
+    ],
+    [
+      "D02",
+      "2026-11-03",
+      "Baseline, margins, 96-place capacity and outcome definitions",
+      "Long + centre + finance",
+      "Each input has a source or an assumption label"
+    ],
+    [
+      "D03",
+      "2026-11-04",
+      "Inventory direct tags; draft GTM and CRM mapping",
+      "Long + technical owner",
+      "No duplicate event producers"
+    ],
+    [
+      "D04",
+      "2026-11-05",
+      "Preview and first 12 QA scenarios",
+      "Long + technical owner",
+      "Logs include event_id, consent and CRM outcome"
+    ],
+    [
+      "D05",
+      "2026-11-06",
+      "Remaining 12 QA scenarios; proposed publish review at 20:00 SGT",
+      "Long + authorised publisher",
+      "24/24 pass with evidence; rollback version retained"
+    ],
+    [
+      "D06",
+      "2026-11-09",
+      "08:30 SGT preflight; release week-one media, cap S$900",
+      "Long",
+      "All launch prerequisites approved"
+    ],
+    [
+      "D07",
+      "2026-11-13",
+      "Review quality and change one test variable",
+      "Long + sales",
+      "Record costs, outcome maturity and decision"
+    ],
+    [
+      "D08",
+      "2026-11-16",
+      "Release week-two media, cap S$1,000",
+      "Long",
+      "No unresolved measurement or capacity blocker"
+    ],
+    [
+      "D09",
+      "2026-11-23",
+      "Release week-three media, cap S$1,100",
+      "Long",
+      "Total approved media remains within S$3,000"
+    ],
+    [
+      "D10",
+      "2026-11-27",
+      "Initial handover and scheduled stop for 29 November",
+      "Long + centre",
+      "Immature outcomes explicitly remain pending"
+    ],
+    [
+      "D11",
+      "2026-11-29",
+      "Scheduled acquisition stop at 23:59 SGT",
+      "Account schedule + centre duty owner",
+      "No automatic media extension"
+    ],
+    [
+      "D12",
+      "2026-11-30",
+      "Reconcile spend and sources; four follow-up hours",
+      "Long + finance",
+      "Freeze spend snapshot and unmatched list"
+    ],
+    [
+      "D13",
+      "2026-12-29",
+      "Close cohort acquired through 29 November; four follow-up hours",
+      "Long + sales/finance",
+      "Net paid/enrolled deduct refunds; late outcomes separate"
+    ],
+    [
+      "D14",
+      "2027-03-29",
+      "Close latest 90-day contribution window; four follow-up hours",
+      "Long + finance",
+      "Use contribution, not month-one revenue as profit"
+    ]
+  ],
+  "evidence": [
+    [
+      "E01",
+      "2026-11-03",
+      "Scope and baseline",
+      "Long + manager",
+      "Dates, currency, data permissions, outcome definitions and baseline"
+    ],
+    [
+      "E02",
+      "2026-11-06",
+      "GTM draft and export",
+      "Long + technical owner",
+      "Real container ID, version and diff against direct tags"
+    ],
+    [
+      "E03",
+      "2026-11-06",
+      "24 QA logs",
+      "Long + reviewer",
+      "Test ID, time, expected/actual result and screenshot/log link"
+    ],
+    [
+      "E04",
+      "2026-11-09",
+      "Published version and live smoke test",
+      "Authorised publisher",
+      "Real version, publisher, live check and rollback"
+    ],
+    [
+      "E05",
+      "2026-11-30",
+      "Advertising spend export",
+      "Long",
+      "Dates, account/campaign IDs, SGD, fees/taxes and nonconverting spend"
+    ],
+    [
+      "E06",
+      "2026-12-29",
+      "CRM cohort export",
+      "Sales owner",
+      "Lead/child-offer IDs, source/unknown, consent and timestamps"
+    ],
+    [
+      "E07",
+      "2026-12-29",
+      "Payment and refund reconciliation",
+      "Finance",
+      "Booking/payment IDs, gross/refund/net and unmatched records"
+    ],
+    [
+      "E08",
+      "2026-12-29",
+      "Attendance and enrolment",
+      "Centre owner",
+      "Check-in, enrolment ID, dates, payments and refunds"
+    ],
+    [
+      "E09",
+      "2027-03-29",
+      "90-day contribution and costs",
+      "Finance",
+      "Delivery costs, fees, RDA credit, applicable taxes and overhead boundary"
+    ],
+    [
+      "E10",
+      "2026-12-29",
+      "Change log and interview case",
+      "Long",
+      "Personal role, actual changes, decisions, limits and links to E01–E09"
+    ]
+  ],
+  "qa": [
+    [
+      "Q01",
+      "Meta / desktop Chrome",
+      "Consent granted",
+      "Submit a valid enquiry; allow measurement",
+      "One CRM record; each valid stage event once; consent respected",
+      "Not run"
+    ],
+    [
+      "Q02",
+      "Meta / mobile Safari",
+      "Consent granted",
+      "Submit a valid enquiry; allow measurement",
+      "One CRM record; each valid stage event once; consent respected",
+      "Not run"
+    ],
+    [
+      "Q03",
+      "Search / desktop Chrome",
+      "Consent granted",
+      "Submit a valid enquiry; allow measurement",
+      "One CRM record; each valid stage event once; consent respected",
+      "Not run"
+    ],
+    [
+      "Q04",
+      "Search / mobile Safari",
+      "Consent granted",
+      "Submit a valid enquiry; allow measurement",
+      "One CRM record; each valid stage event once; consent respected",
+      "Not run"
+    ],
+    [
+      "Q05",
+      "Meta / desktop Chrome",
+      "Consent refused",
+      "Submit a valid enquiry; refuse measurement",
+      "One operational CRM record; zero GA4/Ads/Meta events under the chosen basic mode",
+      "Not run"
+    ],
+    [
+      "Q06",
+      "Meta / mobile Safari",
+      "Consent refused",
+      "Submit a valid enquiry; refuse measurement",
+      "One operational CRM record; zero GA4/Ads/Meta events under the chosen basic mode",
+      "Not run"
+    ],
+    [
+      "Q07",
+      "Search / desktop Chrome",
+      "Consent refused",
+      "Submit a valid enquiry; refuse measurement",
+      "One operational CRM record; zero GA4/Ads/Meta events under the chosen basic mode",
+      "Not run"
+    ],
+    [
+      "Q08",
+      "Search / mobile Safari",
+      "Consent refused",
+      "Submit a valid enquiry; refuse measurement",
+      "One operational CRM record; zero GA4/Ads/Meta events under the chosen basic mode",
+      "Not run"
+    ],
+    [
+      "Q09",
+      "Meta / desktop Chrome",
+      "Invalid input",
+      "Omit or invalidate a required field",
+      "No successful enquiry or Lead event; show the correct error",
+      "Not run"
+    ],
+    [
+      "Q10",
+      "Meta / mobile Safari",
+      "Invalid input",
+      "Omit or invalidate a required field",
+      "No successful enquiry or Lead event; show the correct error",
+      "Not run"
+    ],
+    [
+      "Q11",
+      "Search / desktop Chrome",
+      "Invalid input",
+      "Omit or invalidate a required field",
+      "No successful enquiry or Lead event; show the correct error",
+      "Not run"
+    ],
+    [
+      "Q12",
+      "Search / mobile Safari",
+      "Invalid input",
+      "Omit or invalidate a required field",
+      "No successful enquiry or Lead event; show the correct error",
+      "Not run"
+    ],
+    [
+      "Q13",
+      "Meta / desktop Chrome",
+      "Retry / duplicate",
+      "Resubmit or refresh the response",
+      "One record for the same idempotency key; no extra conversion",
+      "Not run"
+    ],
+    [
+      "Q14",
+      "Meta / mobile Safari",
+      "Retry / duplicate",
+      "Resubmit or refresh the response",
+      "One record for the same idempotency key; no extra conversion",
+      "Not run"
+    ],
+    [
+      "Q15",
+      "Search / desktop Chrome",
+      "Retry / duplicate",
+      "Resubmit or refresh the response",
+      "One record for the same idempotency key; no extra conversion",
+      "Not run"
+    ],
+    [
+      "Q16",
+      "Search / mobile Safari",
+      "Retry / duplicate",
+      "Resubmit or refresh the response",
+      "One record for the same idempotency key; no extra conversion",
+      "Not run"
+    ],
+    [
+      "Q17",
+      "Meta / desktop Chrome",
+      "Unpaid booking",
+      "Create a booking without payment",
+      "Pending in CRM; zero paid-booking conversions",
+      "Not run"
+    ],
+    [
+      "Q18",
+      "Meta / mobile Safari",
+      "Unpaid booking",
+      "Create a booking without payment",
+      "Pending in CRM; zero paid-booking conversions",
+      "Not run"
+    ],
+    [
+      "Q19",
+      "Search / desktop Chrome",
+      "Unpaid booking",
+      "Create a booking without payment",
+      "Pending in CRM; zero paid-booking conversions",
+      "Not run"
+    ],
+    [
+      "Q20",
+      "Search / mobile Safari",
+      "Unpaid booking",
+      "Create a booking without payment",
+      "Pending in CRM; zero paid-booking conversions",
+      "Not run"
+    ],
+    [
+      "Q21",
+      "Meta / desktop Chrome",
+      "Payment / refund",
+      "Repeat payment confirmation twice, then refund in test",
+      "Count one payment; update net ledger on refund; no new lead from the refund",
+      "Not run"
+    ],
+    [
+      "Q22",
+      "Meta / mobile Safari",
+      "Payment / refund",
+      "Repeat payment confirmation twice, then refund in test",
+      "Count one payment; update net ledger on refund; no new lead from the refund",
+      "Not run"
+    ],
+    [
+      "Q23",
+      "Search / desktop Chrome",
+      "Payment / refund",
+      "Repeat payment confirmation twice, then refund in test",
+      "Count one payment; update net ledger on refund; no new lead from the refund",
+      "Not run"
+    ],
+    [
+      "Q24",
+      "Search / mobile Safari",
+      "Payment / refund",
+      "Repeat payment confirmation twice, then refund in test",
+      "Count one payment; update net ledger on refund; no new lead from the refund",
+      "Not run"
+    ]
+  ]
 }
