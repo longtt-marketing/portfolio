@@ -1,0 +1,109 @@
+{
+  "status": "proposed_planning_assumptions_not_observed_results",
+  "as_of": "2026-10-26",
+  "currency": "SGD",
+  "offer": {
+    "name": "RDA",
+    "public_price": 30,
+    "source": "https://www.metarobotics.sg/rda.html",
+    "scope": "Novena and Katong, subject to availability"
+  },
+  "media_budget": 1500,
+  "one_month_management_fee": 2000,
+  "channels": {
+    "meta_prospecting": 900,
+    "google_search": 450,
+    "remarketing_if_eligible": 150
+  },
+  "weekly_media_caps": [
+    0,
+    500,
+    500,
+    500
+  ],
+  "hours_per_week": 20,
+  "weeks": 4,
+  "assumed_capacity": 60,
+  "assumed_net_session_contribution": 10,
+  "assumed_course_contribution_first_90_days": 500,
+  "contribution_reserve_fraction": 0.2,
+  "exclusions": "Additional creative/tools, nonrecoverable taxes or fees not already included, fixed overhead. Deduct actual amounts separately. Do not double count RDA if credited to course fees.",
+  "scenarios": {
+    "downside": {
+      "enquiries": 65,
+      "qualified": 42,
+      "net_paid_bookings": 24,
+      "attended": 18,
+      "enrolments": 4,
+      "calculated": {
+        "media_per_enquiry": 23.08,
+        "media_per_qualified": 35.71,
+        "media_per_paid_booking": 62.5,
+        "media_per_enrolment": 375.0,
+        "media_and_fee_per_enrolment": 875.0,
+        "rda_gross_receipts": 720,
+        "contribution_before_marketing": 2240,
+        "contribution_after_media_and_fee": -1260,
+        "contribution_after_reserve_media_and_fee": -1708.0
+      }
+    },
+    "base": {
+      "enquiries": 100,
+      "qualified": 70,
+      "net_paid_bookings": 40,
+      "attended": 32,
+      "enrolments": 8,
+      "calculated": {
+        "media_per_enquiry": 15.0,
+        "media_per_qualified": 21.43,
+        "media_per_paid_booking": 37.5,
+        "media_per_enrolment": 187.5,
+        "media_and_fee_per_enrolment": 437.5,
+        "rda_gross_receipts": 1200,
+        "contribution_before_marketing": 4400,
+        "contribution_after_media_and_fee": 900,
+        "contribution_after_reserve_media_and_fee": 20.0
+      }
+    },
+    "upside": {
+      "enquiries": 130,
+      "qualified": 95,
+      "net_paid_bookings": 55,
+      "attended": 47,
+      "enrolments": 14,
+      "calculated": {
+        "media_per_enquiry": 11.54,
+        "media_per_qualified": 15.79,
+        "media_per_paid_booking": 27.27,
+        "media_per_enrolment": 107.14,
+        "media_and_fee_per_enrolment": 250.0,
+        "rda_gross_receipts": 1650,
+        "contribution_before_marketing": 7550,
+        "contribution_after_media_and_fee": 4050,
+        "contribution_after_reserve_media_and_fee": 2540.0
+      }
+    }
+  },
+  "cohort": "Acquire in weeks 2-4; initial report end week 4; outcome close 30 days after final lead; course contribution measured over first 90 days per enrolment.",
+  "gates": {
+    "qa_checks": 6,
+    "record_status_completeness_min": 0.95,
+    "duplicate_rate_max": 0.01,
+    "inspect_spend_without_qualified": 75,
+    "observation_days": 7,
+    "mature_paid_bookings_before_scale": 20,
+    "attendance_min": 0.8,
+    "attended_to_enrolment_min": 0.25,
+    "scale_interval_hours": 72,
+    "scale_step_fraction_range": [
+      0.1,
+      0.15
+    ]
+  },
+  "note": "Targets and commercial assumptions are chosen for a testable proposal, not market benchmarks, verified capacity, past achievements or authorisation to spend.",
+  "base_economics": {
+    "course_contribution_breakeven": 387.5,
+    "course_contribution_breakeven_with_reserve": 496.875,
+    "planning_blended_paid_booking_cpa_ceiling": 38
+  }
+}
