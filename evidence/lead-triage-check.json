@@ -1,0 +1,133 @@
+{
+  "checked_on": "2026-10-26",
+  "verification": "Self-run automated engineering check; not an independent certification.",
+  "n8n_version": "2.23.3",
+  "workflow_sha256_canonical_json": "fe64764cd913523cc3c0c859c1be16c82909ec319f5526316035669af16b75c6",
+  "hash_format": "UTF-8 JSON with sorted keys, no optional whitespace, non-ASCII characters preserved",
+  "scope": "Real n8n engine and credential transport; simulated provider only. No real-model quality, throughput, production security or client results established.",
+  "offline_regression_checks_passed": 27,
+  "integration_scenarios_passed": 14,
+  "provider": "Local simulated Messages API; no real Anthropic call or real API key",
+  "credential_check": "n8n Header Auth delivered a dummy credential to the local fixture",
+  "privacy_check": "Name and email excluded from fixture requests; free-text messages can still contain personal data",
+  "cases": [
+    {
+      "case": "hot",
+      "http": 200,
+      "status": "scored",
+      "route": "hot: reply within 1 hour",
+      "score": 10,
+      "providerCalls": 1
+    },
+    {
+      "case": "warm",
+      "http": 200,
+      "status": "scored",
+      "route": "warm: review for nurture",
+      "score": 4,
+      "providerCalls": 1
+    },
+    {
+      "case": "cold",
+      "http": 200,
+      "status": "scored",
+      "route": "cold: review for low-priority follow-up",
+      "score": 0.8,
+      "providerCalls": 1
+    },
+    {
+      "case": "bad-email",
+      "http": 422,
+      "status": "rejected",
+      "route": null,
+      "score": null,
+      "providerCalls": 0
+    },
+    {
+      "case": "blank-message",
+      "http": 422,
+      "status": "rejected",
+      "route": null,
+      "score": null,
+      "providerCalls": 0
+    },
+    {
+      "case": "negative-budget",
+      "http": 422,
+      "status": "rejected",
+      "route": null,
+      "score": null,
+      "providerCalls": 0
+    },
+    {
+      "case": "bad-budget",
+      "http": 422,
+      "status": "rejected",
+      "route": null,
+      "score": null,
+      "providerCalls": 0
+    },
+    {
+      "case": "bad-json",
+      "http": 200,
+      "status": "needs_review",
+      "route": "manual_review",
+      "score": null,
+      "providerCalls": 1
+    },
+    {
+      "case": "bad-score",
+      "http": 200,
+      "status": "needs_review",
+      "route": "manual_review",
+      "score": null,
+      "providerCalls": 1
+    },
+    {
+      "case": "truncated",
+      "http": 200,
+      "status": "needs_review",
+      "route": "manual_review",
+      "score": null,
+      "providerCalls": 1
+    },
+    {
+      "case": "rate-limit",
+      "http": 200,
+      "status": "needs_review",
+      "route": "manual_review",
+      "score": null,
+      "providerCalls": 1
+    },
+    {
+      "case": "server-error",
+      "http": 200,
+      "status": "needs_review",
+      "route": "manual_review",
+      "score": null,
+      "providerCalls": 1
+    },
+    {
+      "case": "disconnect",
+      "http": 200,
+      "status": "needs_review",
+      "route": "manual_review",
+      "score": null,
+      "providerCalls": 1
+    },
+    {
+      "case": "timeout",
+      "http": 200,
+      "status": "needs_review",
+      "route": "manual_review",
+      "score": null,
+      "providerCalls": 1
+    }
+  ],
+  "not_established": [
+    "Real model qualification quality",
+    "Production reliability, authentication or abuse controls",
+    "Persistent queue, notification delivery or duplicate handling",
+    "Client conversion, revenue or time saved"
+  ]
+}
