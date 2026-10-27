@@ -1,0 +1,125 @@
+{
+  "document_type": "Authored methodology and reconciliation summary; not an original platform export",
+  "source": "Candidate confirmation, 26–27 Oct 2026",
+  "independently_verified": false,
+  "currency": "USD",
+  "campaign": {
+    "offer": "Paid introductory session leading to a paid education programme",
+    "before_start": "2026-07-01",
+    "before_end": "2026-07-31",
+    "before_freeze": "2026-08-31",
+    "after_start": "2026-08-01",
+    "after_end": "2026-08-31",
+    "after_freeze": "2026-10-01",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "followup_days": 30,
+    "attribution": "Assign each deduplicated person/offer enquiry to its first eligible paid touch. Retain source and click ID where available; assisted touches stay separate. Unknown sources are not forced into Meta/Search.",
+    "cohort_rule": "Acquire within the stated calendar month; count qualifying payment, attendance and enrolment only within 30 days after that enquiry. Freeze after the latest window closes. Outcomes after that window stay separate.",
+    "qualified_definition": "Correct offer/age, serviceable location, valid received contact and stated interest confirmed by sales; no duplicate or spam.",
+    "role": "Campaign lead: budget, targeting, keyword exclusions, creative brief and landing-page/CRM coordination. Centre team: qualification, payments, refunds, attendance and enrolment.",
+    "later_reconciliation": {
+      "Meta": {
+        "raw": 169,
+        "duplicates": 9,
+        "gross_paid": 57,
+        "booking_refunds": 3,
+        "gross_enrolled": 16,
+        "enrolment_refunds": 1
+      },
+      "Search": {
+        "raw": 83,
+        "duplicates": 3,
+        "gross_paid": 31,
+        "booking_refunds": 1,
+        "gross_enrolled": 9,
+        "enrolment_refunds": 0
+      }
+    },
+    "original_exports_available": false,
+    "public_title": "Education acquisition campaign",
+    "client_legal_name": null,
+    "reported_actions": [
+      [
+        "2026-08-01",
+        "Exclude job/toy research queries; separate brand and non-brand review."
+      ],
+      [
+        "2026-08-08",
+        "Add offer/location qualification and route received enquiries to the centre team."
+      ],
+      [
+        "2026-08-15",
+        "Review qualified and paid outcomes, then revise creative copy within the same channel budgets."
+      ]
+    ],
+    "source_scope": "Dates, role, attribution rules, changes and channel-level reconciliation confirmed by candidate. Original Ads/CRM/payment exports are not attached. Client name is not disclosed."
+  },
+  "figures": {
+    "before": {
+      "enquiries": 180,
+      "qualified": 108,
+      "paid": 54,
+      "attended": 42,
+      "enrolled": 14,
+      "media_cac": 214.28571428571428,
+      "cpql": 27.77777777777778,
+      "paid_cpa": 55.55555555555556
+    },
+    "after": {
+      "enquiries": 240,
+      "qualified": 168,
+      "paid": 84,
+      "attended": 68,
+      "enrolled": 24,
+      "media_cac": 125.0,
+      "cpql": 17.857142857142858,
+      "paid_cpa": 35.714285714285715
+    },
+    "meta_before": {
+      "media": 1800,
+      "enquiries": 132,
+      "qualified": 84,
+      "paid": 42,
+      "attended": 33,
+      "enrolled": 11
+    },
+    "meta_after": {
+      "media": 1800,
+      "enquiries": 160,
+      "qualified": 108,
+      "paid": 54,
+      "attended": 44,
+      "enrolled": 15
+    },
+    "search_before": {
+      "media": 1200,
+      "impressions": 12000,
+      "clicks": 480,
+      "enquiries": 48,
+      "qualified": 24,
+      "paid": 12,
+      "attended": 9,
+      "enrolled": 3
+    },
+    "search_after": {
+      "media": 1200,
+      "impressions": 12000,
+      "clicks": 600,
+      "enquiries": 80,
+      "qualified": 60,
+      "paid": 30,
+      "attended": 24,
+      "enrolled": 9
+    },
+    "reconciliation": {
+      "raw_submissions": 252,
+      "duplicate_submissions": 12,
+      "gross_paid_bookings": 88,
+      "refunded_bookings": 4,
+      "gross_enrolments": 25,
+      "cancelled_refunded_enrolments": 1
+    },
+    "media_per_period": 3000
+  },
+  "scope": "Media-only acquisition cost, no revenue/profit claim or causal attribution."
+}
